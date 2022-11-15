@@ -503,6 +503,8 @@
 			));
 
 			// Existing dates
+			$data['start'] = $data['start'] ?? '';
+			$data['end'] = $data['end'] ?? '';
 			if(is_array($data)) {
 				if(!is_array($data['start'])) $data['start'] = array($data['start']);
 				if(!is_array($data['end'])) $data['end'] = array($data['end']);

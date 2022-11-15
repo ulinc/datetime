@@ -23,6 +23,9 @@
 		</author>
 	</authors>
 	<releases>
+		<release version="3.10.2" date="2022-11-15" min="2.7.10">
+			- more PHP 8.1 Fixes in field.datetime.php
+		</release>
 		<release version="3.10.1" date="2022-11-15" min="2.7.10">
 			- PHP 8.1 Fixes in field.datetime.php plus fix for implode() argument order (may require PHP 7+)
 		</release>
