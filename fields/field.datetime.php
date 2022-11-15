@@ -124,7 +124,7 @@
 					self::__createCalendar() .
 					$cutter .
 				'</div>',
-				array('class' => implode($classes, ' '))
+				array('class' => implode(' ', $classes))
 			);
 		}
 
@@ -145,7 +145,9 @@
 		 *  returns an input field as string
 		 */
 		private static function __createDateField($element, $type, $date, $time, $prepopulate=0) {
-
+      $class = '';
+      $parsed = [];
+      
 			// Parse date
 			if(isset($date) || $prepopulate) {
 				$parsed = Calendar::formatDate($date, $time);
@@ -155,6 +157,9 @@
 					$class = 'invalid';
 				}
 			}
+			
+			$parsed['date'] = $parsed['date'] ?? null;
+			$parsed['timestamp'] = $parsed['timestamp'] ?? null;
 
 			// Generate field
 			return '<input type="text" name="fields[' . $element . '][' . $type . '][]" value="' . $parsed['date'] . '" data-timestamp="' . $parsed['timestamp'] . '" class="' . $type . ' ' . $class . '" autocomplete="off" /><em class="' . $type . ' label"></em>';

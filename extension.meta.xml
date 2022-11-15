@@ -2,7 +2,7 @@
 <extension id="datetime" status="released" xmlns="http://getsymphony.com/schemas/extension/1.0">
 	<name>Date and Time</name>
 	<description>Date and time management for Symphony</description>
-	<repo type="github">https://github.com/DeuxHuitHuit/datetime</repo>
+	<repo type="github">https://github.com/animaux/datetime</repo>
 	<url type="discuss">https://www.getsymphony.com/discuss/thread/83265</url>
 	<types>
 		<type>Field</type>
@@ -23,6 +23,9 @@
 		</author>
 	</authors>
 	<releases>
+		<release version="3.10.1" date="2022-11-15" min="2.7.10">
+			- PHP 8.1 Fixes in field.datetime.php plus fix for implode() argument order (may require PHP 7+)
+		</release>
 		<release version="3.10.0" date="2018-11-22" min="2.5.0" max="2.x.x">
 			- datetime.xsl: Make the xpath root configurable
 		</release>
