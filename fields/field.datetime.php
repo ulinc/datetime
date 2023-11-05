@@ -102,6 +102,9 @@
 			if($class) {
 				$classes[] = $class;
 			}
+			
+			// Initialize the cutter variable
+			$cutter = '';
 
 			// Get timer
 			if($time == 1) {
